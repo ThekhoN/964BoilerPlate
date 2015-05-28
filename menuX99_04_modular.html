@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="stylesheets/screen.css">
+</head>
+<body>
+   
+ 
+   
+   
+   
+
+<!--   <svg id="svg"></svg>-->
+  
+  <div class="svgCont" class="unknown" >
+   <svg width="100%" height="100%" viewBox="0 0 120 120"  id="x99" preserveAspectRatio="none" >
+        <path fill="#939598" d="M119.979,35c0,0-39.021,0-60,0s-60,0-60,0V10c0,0,37.854,0,60,0s60,0,60,0V35z"/>
+        
+        <path  fill="#939598" d="M119.979,72.5c0,0-39.021,0-60,0s-60,0-60,0v-25c0,0,37.854,0,60,0s60,0,60,0V72.5z"/>
+        
+        <path  fill="#939598"  d="M119.979,110c0,0-39.021,0-60,0s-60,0-60,0V85c0,0,37.854,0,60,0s60,0,60,0V110z"/>
+        
+        
+    </svg>    
+  </div>
+   
+  
+   <button class="nonActive">
+       Clickerino
+   </button>   
+   
+   
+    
+<script src="js/jQuery.js"></script> 
+<script src="js/snapMin.js"></script>
+
+<script>
+    $(document).ready(function(){
+        
+        var s = Snap('#x99'),
+        
+            path1 = s.select('path:nth-of-type(1)'),
+            path2 = s.select('path:nth-of-type(2)'),
+            path3 = s.select('path:nth-of-type(3)');
+        
+            path1.attr({
+                fill:"#ffffff"
+               
+               
+            })
+            
+            path2.attr({
+                fill:"#ffffff"
+            })
+            
+            path3.attr({
+                fill:"#ffffff"
+            })
+            
+            ///Path1 Stages
+            var path1Stages = [
+                //anticipate
+                "M119.979,35c0,0-39.021-4.989-60-4.989s-60,4.989-60,4.989V10c0,0,37.854-4.989,60-4.989s60,4.989,60,4.989V35z",
+                //backtoNeutral
+                "M119.979,35c0,0-39.021,0-60,0s-60,0-60,0V10c0,0,37.854,0,60,0s60,0,60,0V35z",
+                //maxStretch
+                "M119.979,35c0,0-39.021,6.5-60,6.5s-60-6.5-60-6.5V10c0,0,37.854,6.5,60,6.5s60-6.5,60-6.5V35z",
+                //overshoot also pre-rotate
+                "M119.979,35c0,0-39.021-2.521-60-2.521s-60,2.521-60,2.521V10c0,0,37.854-2.521,60-2.521s60,2.521,60,2.521V35z"
+                
+            ];
+        
+        
+        
+            var path2Stages = [
+                //anticipate
+                "M119.979,72.5c0,0-53.333,3.834-74.312,3.834S-0.021,72.5-0.021,72.5v-25c0,0,23.542,3.834,45.688,3.834s74.312-3.834,74.312-3.834V72.5z",
+                //max anticipate
+                "M119.979,62.5c0,0-53.333,18.834-74.312,18.834S-0.021,77.5-0.021,77.5v-30c0,0,23.542,3.834,45.688,3.834s74.312-3.834,74.312-3.834V62.5z",
+                //backToNeutral
+                "M119.979,72.5c0,0-39.021,0-60,0s-60,0-60,0v-25c0,0,37.854,0,60,0s60,0,60,0V72.5z"
+            ]
+            
+            ///Path3 Stages
+            var path3Stages = [
+                //anticipate
+                "M119.979,110c0,0-39.021,5-60,5s-60-5-60-5V85c0,0,37.854,5,60,5s60-5,60-5V110z",
+                //backtoNeutral
+                "M119.979,110c0,0-39.021,0-60,0s-60,0-60,0V85c0,0,37.854,0,60,0s60,0,60,0V110z",
+                //maxStretch
+                "M119.979,110c0,0-39.021-6.25-60-6.25s-60,6.25-60,6.25V85c0,0,37.854-6.25,60-6.25s60,6.25,60,6.25V110z",
+                //overshoot also pre-rotate
+                "M119.979,110c0,0-39.021,2.5-60,2.5s-60-2.5-60-2.5V85c0,0,37.854,2.5,60,2.5s60-2.5,60-2.5V110z"
+                
+            ]
+            
+            function path1Animate(){
+                path1.animate({d:path1Stages[0]}, 200, mina.bounce, 
+                    function(){
+                        path1.animate({d:path1Stages[1], transform:"translate(0 31)"}, 30, mina.linear,
+                            function(){
+                            path1.animate({d:path1Stages[2]}, 150, mina.bounce, 
+                                function(){
+                                path1.animate({d:path1Stages[3]}, 50, mina.bounce, 
+                                    function(){
+                                        path1.animate({d:path1Stages[1]}, 100, mina.bounce, 
+                                            function(){
+                                            path1.animate({d:path1Stages[3]}, 70, mina.bounce, 
+                                                function(){
+                                                    path1.animate({d:path1Stages[1]}, 100, mina.bounce, 
+                                                        function(){
+                                                            path1.animate({transform:"rotate(-135, 67, 40)"}, 750, mina.bounce)
+                                                        })
+                                                })
+                                            })
+                                    }) 
+                                        
+                                })
+                            })
+                        })
+            }
+        
+        
+            function path2Animate(){
+                path2.animate({d:path2Stages[0]}, 100, mina.bounce, 
+                             function(){
+                               
+                                        path2.animate({transform:"translate(70 0)", opacity:0}, 100, mina.easeout)
+                                    })
+                           
+            }
+        
+        function path2Animate_reset(){
+                //path2.animate({d:path2Stages[3]}, 60, mina.bounce)
+                path2.animate({transform:"translate(0 0)", opacity:1}, 200, mina.bounce, 
+                        function(){
+                            path2.animate({d:path2Stages[2]}, 60, mina.bounce)
+                        })
+            }
+        
+        
+        
+            function path3Animate(){
+                path3.animate({d:path3Stages[0]}, 200, mina.bounce, 
+                    function(){
+                        path3.animate({d:path3Stages[1], transform:"translate(0 -31)"}, 30, mina.linear,
+                            function(){
+                            path3.animate({d:path3Stages[2]}, 150, mina.bounce, 
+                                function(){
+                                path3.animate({d:path3Stages[3]}, 50, mina.bounce, 
+                                    function(){
+                                        path3.animate({d:path3Stages[1]}, 100, mina.bounce, 
+                                            function(){
+                                            path3.animate({d:path3Stages[3]}, 70, mina.bounce, 
+                                                function(){
+                                                    path3.animate({d:path3Stages[1]}, 100, mina.bounce, 
+                                                        function(){
+                                                            path3.animate({transform:"rotate(135, 68, 78)"}, 750, mina.bounce)
+                                                        })
+                                                })
+                                            })
+                                    }) 
+                                        
+                                })
+                            })
+                        })
+            }
+        
+            
+            function path1Animate_reset(){
+                path1.animate({transform:"rotate(0, 65, 80)"}, 750, mina.bounce); 
+            }
+        
+        function path3Animate_reset(){
+                path3.animate({transform:"rotate(0, 65, 80)"}, 750, mina.bounce); 
+            }
+        
+        
+        
+        
+        
+      
+        
+        
+        
+     
+        
+       var clickerino = $('button');
+        
+            clickerino.data('state', 0)
+        
+        
+        
+        clickerino.on('click', function(){
+            var $this =  $(this);
+            
+             if($this.data('state')==0){
+
+                    path2Animate()
+
+                    setTimeout(path1Animate,  200);
+                    setTimeout(path3Animate, 200)
+
+             }  
+            
+            else {
+                //alert("reset katka")
+                path1Animate_reset()
+                path3Animate_reset()
+                
+                setTimeout(path2Animate_reset, 500)
+            }
+            
+            $this.data('state', !clickerino.data('state'))
+
+                                    
+
+            });
+        
+        
+        
+        ///End of Doc Ready
+        });
+             
+ 
+</script>   
+</body>
+</html>

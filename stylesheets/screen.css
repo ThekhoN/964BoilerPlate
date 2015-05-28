@@ -1,0 +1,238 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* <link rel="stylesheet" href="http://i1.sdlcdn.com/static/img/marketing-mailers/mailer/2015/newFashionMarch027_2015/css/fontello.css"> */
+/* line 5, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 39, ../sass/screen.scss */
+#wrapper_PromotionName {
+  max-width: 1664px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+  font-size: 16px;
+}
+/* line 12, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-2.2.1/sass/susy/output/support/_clearfix.scss */
+#wrapper_PromotionName:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media (max-width: 640px) {
+  /* line 39, ../sass/screen.scss */
+  #wrapper_PromotionName {
+    font-size: 12px;
+  }
+}
+
+/* line 50, ../sass/screen.scss */
+.contRofl_clr {
+  width: 100%;
+  float: left;
+}
+/* line 15, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/bourbon-compass-4.0.2/stylesheets/bourbon/addons/_clearfix.scss */
+.contRofl_clr:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 57, ../sass/screen.scss */
+.flexImg99 {
+  max-width: 100%;
+  height: auto;
+  display: inline;
+}
+
+/* line 64, ../sass/screen.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 71, ../sass/screen.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 76, ../sass/screen.scss */
+a img {
+  border: none;
+}
+
+/* line 81, ../sass/screen.scss */
+a {
+  outline: 0;
+}
+
+/* line 85, ../sass/screen.scss */
+img.map, map area {
+  outline: none;
+}
+
+/* line 91, ../sass/screen.scss */
+.sectionWrapX {
+  height: 750px;
+  height: 100vh;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 15, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/bourbon-compass-4.0.2/stylesheets/bourbon/addons/_clearfix.scss */
+.sectionWrapX:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 101, ../sass/screen.scss */
+.wrapCenterCont {
+  text-align: center;
+  background: #cccccc;
+  height: 100%;
+}
+/* line 107, ../sass/screen.scss */
+.wrapCenterCont:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* line 118, ../sass/screen.scss */
+.centeredContX {
+  display: inline-block;
+  vertical-align: middle;
+  background: aquamarine;
+  width: 30%;
+}
+
+/* line 131, ../sass/screen.scss */
+.svgCont {
+  width: 500px;
+  height: 500px;
+  margin: 100px auto;
+  position: relative;
+  background: #000;
+  padding: 0px;
+  outline: 1px solid #000000;
+}
+
+/* line 145, ../sass/screen.scss */
+.svgCont svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 155, ../sass/screen.scss */
+body {
+  background: #000000;
+}
+
+/* line 179, ../sass/screen.scss */
+.navFixedSmall {
+  position: static !important;
+  /*this resets FIXED widget to static position*/
+}
+
+/* line 185, ../sass/screen.scss */
+.gutterPromotionHiddenOnOtherPages {
+  display: none !important;
+}
+
+/* line 189, ../sass/screen.scss */
+.bottomFreezeDiv, #breadCrumbWrapper, #rightLangWrapper {
+  display: none !important;
+  z-index: -1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* line 197, ../sass/screen.scss */
+.header-fixed, .hd-rvmp.header-fixed, #headerTop, #headerFixed {
+  position: static !important;
+}
+
+/* line 202, ../sass/screen.scss */
+#content_wrapper {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+/*weird fixed nav bar*/
+/* line 209, ../sass/screen.scss */
+.fixed-header-slide {
+  min-height: 0px !important;
+}
+
+/* ////////////////// ENDERINO RESETERINO ///////////////////// */
